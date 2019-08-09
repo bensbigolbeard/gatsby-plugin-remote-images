@@ -32,7 +32,7 @@ exports.onCreateNode = async (
     if (imagePathSegments.length) {
       await createImageNodesInArrays(imagePathSegments[0], node, { imagePathSegments, ...createImageNodeOptions })
     } else {
-      const url = getPath(node, path, ext)
+      const url = getPath(node, imagePath, ext)
       await createImageNode(url, node, createImageNodeOptions)
     }
   }
